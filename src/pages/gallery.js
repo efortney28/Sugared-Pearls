@@ -11,9 +11,11 @@ export default function Gallery({ data }) {
 
   return (
     <Layout>
-      <SEO title="Gallery" />
+      <SEO title="Gallery - Sugared Pearls Bake Shoppe" />
       <PageContainer>
-        <GalleryHeader>Gallery</GalleryHeader>
+        <GalleryHeader>
+          Sugared Pearls | <RedText>Gallery</RedText>
+        </GalleryHeader>
         <PageDescription>
           Sugared Pearls Bake Shoppe offers a wide variety of sweets and
           desserts, so there is something for everyone! Whether you want a cake,
@@ -69,8 +71,13 @@ const PageContainer = styled.section`
   justify-content: center;
   margin: 1rem;
 `
-const GalleryHeader = styled.h2``
-
+const GalleryHeader = styled.h2`
+  text-align: center;
+  font-size: 1.75rem;
+`
+const RedText = styled.span`
+  color: #b91313;
+`
 const PageDescription = styled.p``
 
 const GalleryContainer = styled.section`
@@ -80,10 +87,14 @@ const GalleryContainer = styled.section`
   margin: 2rem;
 `
 const CarouselContainer = styled.section`
+  background-color: #ff7c7c;
   margin-bottom: 3rem;
+  box-shadow: 1px 1px 2px;
 `
 
 const CTitle = styled.h3`
+  color: #fefefe;
+  margin-top: 0.5rem;
   text-align: center;
   font-size: 1.5rem;
 `
