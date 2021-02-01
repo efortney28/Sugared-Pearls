@@ -4,7 +4,7 @@ import { graphql, Link } from "gatsby"
 import { Carousel, Image } from "antd"
 
 import Layout from "../components/layout"
-import SEO from "../components/SEO"
+import SEO from "../components/seo"
 
 export default function Gallery({ data }) {
   const posts = data.allContentfulGalleryPost.edges
