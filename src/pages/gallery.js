@@ -78,15 +78,20 @@ const GalleryHeader = styled.h2`
 const RedText = styled.span`
   color: #b91313;
 `
-const PageDescription = styled.p``
+const PageDescription = styled.p`
+  padding-right: 1rem;
+  padding-left: 1rem;
+`
 
 const GalleryContainer = styled.section`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   margin: 2rem;
 `
 const CarouselContainer = styled.section`
+  width: 300px;
   background-color: #ff7c7c;
   margin-bottom: 3rem;
   box-shadow: 1px 1px 2px;
