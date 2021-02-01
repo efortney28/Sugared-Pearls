@@ -1,0 +1,26 @@
+@import "./typography.css";
+:root {
+  --bg-color: #fefefe;
+  --text-color: #6f6f6f;
+  --red-color: #ff7c7c;
+  --footer-color: #666666;
+  font-family: "Poppins";
+}
+.content-container {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+}
+.menu-link:hover,
+.menu-link:active {
+  color: var(--text-color) !important;
+}
+body {
+  margin: 0;
+}
+.CTA-button:hover,
+.CTA-button:active {
+  background-color: #c05d5d;
+}

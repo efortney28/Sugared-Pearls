@@ -1,8 +1,14 @@
+//https://graph.facebook.com/v9.0/1594822344136908/ratings
+
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV || "development"}`,
+})
+
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Sugared Pearls Bake Shoppe`,
+    description: `Your one-stop-shop for all things sweet and delicious, delivered!`,
+    author: `@efortney`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -18,17 +24,31 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `sugared-pearls-bake-shoppe`,
+        short_name: `Sugared Pearls`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#FEFEFE`,
+        theme_color: `#FF7C7C`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/icon.png`, // This path is relative to the root of the site.
       },
     },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: `30w2q46i4rgz`,
+        accessToken: process.env.GATSBY_ACCESS_TOKEN,
+      },
+    },
+    `gatsby-plugin-offline`,
+    {
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          include: /assets/,
+        },
+      },
+    },
+    `gatsby-plugin-styled-components`,
   ],
 }
