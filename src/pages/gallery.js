@@ -24,16 +24,21 @@ export default function Gallery({ data }) {
         </PageDescription>
         <GalleryContainer>
           {posts.map(post => (
-            <section>
-              <h3>{post.node.title}</h3>
+            <CarouselContainer>
+              <CTitle>{post.node.title}</CTitle>
               <Carousel autoplay>
                 {post.node.images.map(img => (
-                  <div style={{ textAlign: "center" }}>
-                    <Image width={200} height={200} src={img.file.url} />
+                  <div>
+                    <Image
+                      width={300}
+                      height={300}
+                      src={img.file.url}
+                      alt="Delicious sweets, delivered!"
+                    />
                   </div>
                 ))}
               </Carousel>
-            </section>
+            </CarouselContainer>
           ))}
         </GalleryContainer>
       </PageContainer>
@@ -73,4 +78,12 @@ const GalleryContainer = styled.section`
   flex-direction: column;
   justify-content: center;
   margin: 2rem;
+`
+const CarouselContainer = styled.section`
+  margin-bottom: 3rem;
+`
+
+const CTitle = styled.h3`
+  text-align: center;
+  font-size: 1.5rem;
 `
