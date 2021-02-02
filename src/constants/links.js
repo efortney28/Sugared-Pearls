@@ -4,10 +4,6 @@ export const links = [
     to: "/",
   },
   {
-    text: "Menu",
-    to: "/menu",
-  },
-  {
     text: "Order",
     to: "/order",
   },

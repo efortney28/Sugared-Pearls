@@ -4,6 +4,7 @@ import { HamburgerArrowAlt } from "react-animated-burgers"
 import { Link } from "gatsby"
 import { links } from "../constants/links"
 import Logo from "../../assets/logo.svg"
+import menuFile from "../../assets/menu.pdf"
 import PropTypes from "prop-types"
 
 const Header = ({ siteTitle }) => {
@@ -39,6 +40,9 @@ const Header = ({ siteTitle }) => {
                 {link.text}
               </Link>
             ))}
+            <a style={linkStyle} href={menuFile} download>
+              Menu
+            </a>
           </MenuContainer>
         )}
       </section>
