@@ -15,8 +15,4 @@ export const links = [
     text: "Gallery",
     to: "/gallery",
   },
-  {
-    text: "Contact Us",
-    to: "/contact",
-  },
 ]
