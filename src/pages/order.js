@@ -1,23 +1,17 @@
 import React, { useState } from "react"
 import styled from "styled-components"
-import { Button, Input, message, Select } from "antd"
+import { Button, Input } from "antd"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 export default function Order() {
   const { TextArea } = Input
-  const { Option } = Select
 
   const [name, setName] = useState()
   const [email, setEmail] = useState()
   const [phone, setPhone] = useState()
   const [location, setLocation] = useState()
-  const [deliveryMethod, setDeliveryMethod] = useState()
   const [message, setMessage] = useState()
-
-  const handleDeliveryMethod = value => {
-    setDeliveryMethod(value)
-  }
 
   return (
     <Layout>
@@ -31,6 +25,9 @@ export default function Order() {
           soon as possible! Once we get your message, we will get back to you
           with a quote and then arrange payment and delivery or pickup.
         </PageDescription>
+        <DeliveryMessage>
+          Please indicate in the message field if you'd like pickup or delivery.
+        </DeliveryMessage>
         <FormContainer>
           <StyledForm
             id="contact-form"
@@ -71,27 +68,13 @@ export default function Order() {
               name="location"
               placeholder="Your Location"
             />
-            <label>Pickup or Delivery?</label>
-            <Select
-              defaultValue="Select one..."
-              onChange={handleDeliveryMethod}
-              style={selectStyle}
-            >
-              <Option value="Pickup">Pickup</Option>
-              <Option value="Delivery">Delivery</Option>
-            </Select>
             <TextArea
               style={textAreaStyle}
               onChange={e => setMessage(e.target.value)}
               name="message"
               placeholder="What would you like to order?"
             />
-            {!name ||
-            !email ||
-            !phone ||
-            !location ||
-            !deliveryMethod ||
-            !message ? (
+            {!name || !email || !phone || !location || !message ? (
               <Button size="large" disabled type="submit">
                 Submit
               </Button>
@@ -122,6 +105,10 @@ const PageDescription = styled.p`
   padding-right: 1rem;
   padding-left: 1rem;
 `
+const DeliveryMessage = styled.h4`
+  color: #b91313;
+  font-size: 1.75rem;
+`
 const FormContainer = styled.section``
 
 const StyledForm = styled.form`
@@ -131,11 +118,6 @@ const StyledForm = styled.form`
   align-items: center;
   width: 80vw;
 `
-const selectStyle = {
-  width: "80vw",
-  marginTop: "0.5rem",
-  marginBottom: "1rem",
-}
 const inputStyle = {
   padding: "1rem",
   margin: "1rem 0",
