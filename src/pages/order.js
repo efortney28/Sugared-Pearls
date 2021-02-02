@@ -108,6 +108,8 @@ const PageDescription = styled.p`
 const DeliveryMessage = styled.h4`
   color: #b91313;
   font-size: 1.75rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
 `
 const FormContainer = styled.section``
 

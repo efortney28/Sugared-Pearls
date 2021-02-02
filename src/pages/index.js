@@ -33,7 +33,7 @@ const IndexPage = () => (
       </P>
       <Button className="CTA-button">ORDER NOW</Button>
     </TextContainer>
-    <MostRecent />
+    <MostRecent style={{ paddingTop: "0.5rem" }} />
     <Testamonials />
   </Layout>
 )
