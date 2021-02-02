@@ -6,12 +6,16 @@ import SEO from "../components/seo"
 
 export default function Contact() {
   const { TextArea } = Input
-  const onFinish = values => {
-    console.log("Success:", values)
-  }
 
-  const onFinishFailed = errorInfo => {
-    console.log("Failed:", errorInfo)
+  const [name, setName] = useState()
+  const [email, setEmail] = useState()
+  const [phone, setPhone] = useState()
+  const [message, setMessage] = useState()
+
+  const encode = data => {
+    return Object.keys(data)
+      .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+      .join("&")
   }
 
   const handleSubmit = () => {}
@@ -31,7 +35,7 @@ export default function Contact() {
         <FormContainer>
           <StyledForm
             id="contact-form"
-            name="Contact Form"
+            name="contact"
             method="POST"
             netlify-honeypot="bot-field"
             data-netlify="true"
@@ -42,24 +46,28 @@ export default function Contact() {
 
             <Input
               style={inputStyle}
+              onChange={e => setName(e.target.value)}
               type="text"
               name="name"
               placeholder="Name"
             />
             <Input
               style={inputStyle}
+              onChange={e => setEmail(e.target.value)}
               type="email"
               name="email"
               placeholder="Email"
             />
             <Input
               style={inputStyle}
+              onChange={e => setPhone(e.target.value)}
               type="tel"
               name="phone"
               placeholder="Phone Number"
             />
             <TextArea
               style={textAreaStyle}
+              onChange={e => setMessage(e.target.value)}
               name="message"
               placeholder="How can we help you?"
             />
