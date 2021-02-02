@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import styled from "styled-components"
-import { Input, message } from "antd"
+import { Button, Input, message } from "antd"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
@@ -11,14 +11,6 @@ export default function Contact() {
   const [email, setEmail] = useState()
   const [phone, setPhone] = useState()
   const [message, setMessage] = useState()
-
-  const encode = data => {
-    return Object.keys(data)
-      .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-      .join("&")
-  }
-
-  const handleSubmit = () => {}
 
   return (
     <Layout>
@@ -71,9 +63,13 @@ export default function Contact() {
               name="message"
               placeholder="How can we help you?"
             />
-            <StyledButton type="submit" onClick={handleSubmit}>
-              Submit
-            </StyledButton>
+            {!name || !email || !phone || !message ? (
+              <Button disabled type="submit">
+                Submit
+              </Button>
+            ) : (
+              <StyledButton type="submit">Submit</StyledButton>
+            )}
           </StyledForm>
         </FormContainer>
       </PageContainer>
