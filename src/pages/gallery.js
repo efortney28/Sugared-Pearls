@@ -81,6 +81,10 @@ const RedText = styled.span`
 const PageDescription = styled.p`
   padding-right: 1rem;
   padding-left: 1rem;
+  @media screen and (min-width: 1000px) {
+    width: 60%;
+    margin: 0 auto;
+  }
 `
 
 const GalleryContainer = styled.section`
@@ -89,12 +93,21 @@ const GalleryContainer = styled.section`
   justify-content: center;
   align-items: center;
   margin: 2rem;
+
+  @media screen and (min-width: 1000px) {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 `
 const CarouselContainer = styled.section`
   width: 300px;
   background-color: #ff7c7c;
   margin-bottom: 3rem;
   box-shadow: 1px 1px 2px;
+  @media screen and (min-width: 1000px) {
+    margin-right: 1rem;
+    margin-left: 1rem;
+  }
 `
 
 const CTitle = styled.h3`

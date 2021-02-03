@@ -33,7 +33,13 @@ export default function Testamonials() {
 const TestamonialsContainer = styled.section`
   margin: 1rem;
 `
-const TestamonialContainer = styled.section``
+const TestamonialContainer = styled.section`
+  @media screen and (min-width: 1000px) {
+    width: 60%;
+    margin: 0 auto;
+    padding-top: 2rem;
+  }
+`
 const Comment = styled.p`
   font-size: 0.8rem;
 `
