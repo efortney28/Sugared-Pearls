@@ -21,4 +21,5 @@ const MostRecentTitle = styled.h3`
   font-family: "Poppins SemiBold";
   color: #fefefe;
   text-align: center;
+  padding: 1rem 0;
 `
