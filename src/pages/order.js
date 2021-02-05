@@ -23,11 +23,8 @@ export default function Order() {
         <PageDescription>
           Ready to order? Fill out the form below and we will get back to you as
           soon as possible! Once we get your message, we will get back to you
-          with a quote and then arrange payment and delivery or pickup.
+          with a quote and then arrange payment.
         </PageDescription>
-        <DeliveryMessage>
-          Please indicate in the message field if you'd like pickup or delivery.
-        </DeliveryMessage>
         <FormContainer>
           <StyledForm
             id="contact-form"
@@ -102,12 +99,6 @@ const RedText = styled.span`
   color: #b91313;
 `
 const PageDescription = styled.p`
-  padding-right: 1rem;
-  padding-left: 1rem;
-`
-const DeliveryMessage = styled.h4`
-  color: #b91313;
-  font-size: 1.75rem;
   padding-right: 1rem;
   padding-left: 1rem;
 `

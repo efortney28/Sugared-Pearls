@@ -28,7 +28,7 @@ module.exports = {
         short_name: `Sugared Pearls`,
         start_url: `/`,
         background_color: `#FEFEFE`,
-        theme_color: `#FF7C7C`,
+        theme_color: `#ffe4e4`,
         display: `minimal-ui`,
         icon: `src/images/icon.png`, // This path is relative to the root of the site.
       },

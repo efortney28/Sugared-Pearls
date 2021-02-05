@@ -35,12 +35,10 @@ const IndexPage = () => {
         </P>
 
         <P>
-          Need something custom? We do that too! We can deliver custom cakes and
-          sweets for any occasion in Baytown, Mont Belvieu and surrounding
-          areas. With <Span>Sugared Pearls Bake Shoppe</Span>, quality is a
-          licensed guarantee. This food is made in a home kitchen and is not
-          inspected by the Department of State Health Services or a local health
-          department.
+          Need something custom? We do that too! With{" "}
+          <Span>Sugared Pearls Bake Shoppe</Span>, quality is a licensed
+          guarantee. This food is made in a home kitchen and is not inspected by
+          the Department of State Health Services or a local health department.
         </P>
         <Button onClick={goToOrder} className="CTA-button">
           ORDER NOW
@@ -56,6 +54,8 @@ const ImagesContainer = styled.section`
   width: 100vw;
   display: flex;
   flex-direction: column;
+  // height: 800px;
+  // object-fit: cover;
 `
 const TextContainer = styled.section`
   padding: 1rem;
