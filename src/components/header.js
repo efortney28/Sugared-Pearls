@@ -36,11 +36,16 @@ const Header = ({ siteTitle }) => {
         {isActive && (
           <MenuContainer>
             {links.map(link => (
-              <Link className="menu-link" style={linkStyle} to={link.to}>
+              <Link
+                className="menu-link"
+                key={link.text}
+                style={linkStyle}
+                to={link.to}
+              >
                 {link.text}
               </Link>
             ))}
-            <a style={linkStyle} href={menuFile} download>
+            <a style={linkStyle} href={menuFile}>
               Menu
             </a>
           </MenuContainer>

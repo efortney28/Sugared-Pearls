@@ -25,15 +25,22 @@ const IndexPage = () => {
           With over 30 years of experience,{" "}
           <Span>Sugared Pearls Bake Shoppe</Span> is your new local desserts and
           sweets shop located in the Baytown, TX area. Whether you're looking
-          for cookies, cakes, macaroons, hot chocolate bombs, or anything in
-          between, we have you covered.
+          for cookies, cakes, pies, macaroons, hot chocolate bombs, or anything
+          in between, we have you covered.
+        </P>
+
+        <P>
+          <Span>Sugared Pearls Bake Shoppe</Span> holds a State of Texas Food
+          Handler Certification, so you know that we mean quality.
         </P>
 
         <P>
           Need something custom? We do that too! We can deliver custom cakes and
           sweets for any occasion in Baytown, Mont Belvieu and surrounding
           areas. With <Span>Sugared Pearls Bake Shoppe</Span>, quality is a
-          licensed guarantee.
+          licensed guarantee. This food is made in a home kitchen and is not
+          inspected by the Department of State Health Services or a local health
+          department.
         </P>
         <Button onClick={goToOrder} className="CTA-button">
           ORDER NOW
@@ -71,10 +78,10 @@ const Span = styled.span`
 `
 const Button = styled.button`
   margin-top: 1rem;
-  background-color: #ff7c7c;
+  background-color: #ffe4e4;
   border: none;
   padding: 1rem 2rem;
-  color: #fefefe;
+  color: #4a4a4a;
   font-family: "Poppins SemiBold";
   font-size: 1rem;
 `

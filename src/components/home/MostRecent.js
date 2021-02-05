@@ -14,12 +14,12 @@ export default function MostRecent() {
 
 const MostRecentContainer = styled.section`
   margin-top: 2rem;
-  background-color: #ff7c7c;
+  background-color: #ffe4e4;
   padding-bottom: 2rem;
 `
 const MostRecentTitle = styled.h3`
   font-family: "Poppins SemiBold";
-  color: #fefefe;
+  color: #4a4a4a;
   text-align: center;
   padding: 1rem 0;
 `

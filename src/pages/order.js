@@ -132,10 +132,10 @@ const textAreaStyle = {
 
 const StyledButton = styled.button`
   margin-top: 1rem;
-  background-color: #ff7c7c;
+  background-color: #ffe4e4;
   border: none;
   padding: 1rem 2rem;
-  color: #fefefe;
+  color: #4a4a4a;
   font-family: "Poppins SemiBold";
   font-size: 1rem;
 `
