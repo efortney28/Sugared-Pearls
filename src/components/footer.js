@@ -13,7 +13,9 @@ export default function footer() {
         </Span>
         <Span>
           <Email style={iconStyle} className="contact-link" /> :{" "}
-          <A href="mailto: tammyzavala@yahoo.com">tammyzavala@yahoo.com</A>
+          <A href="mailto: sugaredpearlsbakeshoppe@gmail.com">
+            sugaredpearlsbakeshoppe@gmail.com
+          </A>
         </Span>
       </LinksContainer>
     </FooterContainer>

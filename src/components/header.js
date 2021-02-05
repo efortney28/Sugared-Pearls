@@ -4,6 +4,8 @@ import { HamburgerArrowAlt } from "react-animated-burgers"
 import { Link } from "gatsby"
 import { links } from "../constants/links"
 import Logo from "../../assets/logo.svg"
+import FB from "../../assets/facebook.svg"
+import Insta from "../../assets/insta.svg"
 import menuFile from "../../assets/menu.pdf"
 import PropTypes from "prop-types"
 
@@ -48,6 +50,20 @@ const Header = ({ siteTitle }) => {
             <a style={linkStyle} href={menuFile}>
               Menu
             </a>
+            <SocialContainer>
+              <a
+                target="_blank"
+                href="https://www.facebook.com/Cakes-By-Tammy-1594822344136908"
+              >
+                <FB style={SocialIconStyle} />
+              </a>
+              <a
+                target="_blank"
+                href="https://www.instagram.com/sugaredpearls/"
+              >
+                <Insta style={SocialIconStyle} />
+              </a>
+            </SocialContainer>
           </MenuContainer>
         )}
       </section>
@@ -86,6 +102,11 @@ const MenuContainer = styled.section`
   display: flex;
   flex-direction: column;
 `
+const SocialContainer = styled.section`
+  display: flex;
+  justify-content: space-between;
+  margin-top: 3rem;
+`
 
 const menuButtonStyle = {
   position: "sticky",
@@ -100,6 +121,12 @@ const linkStyle = {
   color: "#FEFEFE",
   fontSize: "1.5rem",
   padding: "1rem 0",
+}
+
+const SocialIconStyle = {
+  height: "2.5rem",
+  color: "FEFEFE",
+  margin: "1rem",
 }
 
 export default Header
