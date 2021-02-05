@@ -101,7 +101,7 @@ const GalleryContainer = styled.section`
 `
 const CarouselContainer = styled.section`
   width: 300px;
-  background-color: #ff7c7c;
+  background-color: #ffe4e4;
   margin-bottom: 3rem;
   box-shadow: 1px 1px 2px;
   @media screen and (min-width: 1000px) {
@@ -111,7 +111,7 @@ const CarouselContainer = styled.section`
 `
 
 const CTitle = styled.h3`
-  color: #fefefe;
+  color: #4a4a4a;
   margin-top: 0.5rem;
   text-align: center;
   font-size: 1.5rem;
