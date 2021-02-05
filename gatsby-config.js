@@ -27,8 +27,8 @@ module.exports = {
         name: `sugared-pearls-bake-shoppe`,
         short_name: `Sugared Pearls`,
         start_url: `/`,
-        background_color: `#FEFEFE`,
         theme_color: `#FFE4E4`,
+        background_color: `#FEFEFE`,
         display: `minimal-ui`,
         icon: `src/images/icon.png`, // This path is relative to the root of the site.
       },

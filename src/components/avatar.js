@@ -44,6 +44,7 @@ const avatarStyle = {
   width: "150px",
   margin: "0 auto",
   marginTop: "-7rem",
+  marginBottom: "2rem",
   boxShadow: "1px 1px 6px",
 }
 export default Avatar

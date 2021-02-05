@@ -18,9 +18,9 @@ const IndexPage = () => {
       <SEO title="Home" />
       <ImagesContainer>
         <Image />
-        <Avatar />
       </ImagesContainer>
       <TextContainer>
+        <Avatar />
         <P>
           With over 30 years of experience,{" "}
           <Span>Sugared Pearls Bake Shoppe</Span> is your new local desserts and
@@ -54,8 +54,8 @@ const ImagesContainer = styled.section`
   width: 100vw;
   display: flex;
   flex-direction: column;
-  // height: 800px;
-  // object-fit: cover;
+  height: 800px;
+  object-fit: cover;
 `
 const TextContainer = styled.section`
   padding: 1rem;
