@@ -1,43 +1,38 @@
 import React from "react"
+import { useStaticQuery, graphql } from "gatsby"
 import styled from "styled-components"
 
-export default function Testamonials() {
+export default function Testamonials(props) {
+  const reviews = props.reviews
   return (
     <TestamonialsContainer>
-      <TestamonialContainer>
-        <Comment>
-          Thank you so much Ms Tammy for the delicious pies on Thanksgiving!!
-          The coconut meringue was my absolute favorite and I had to hide a
-          piece away for later. The sweet potato and pecan pie was a big hit
-          with the family!!! They were absolutely delicious!! Thank you for the
-          hard work on all the homemade goodness and I cannot wait for another
-          holiday to have more coconut meringue, so I’ll have to make up my own
-          holiday to have another one soon❤️❤️ I would absolutely recommend 100
-          percent!!! Thank you Ms Tammy!!!
-        </Comment>
-        <Author>- Paula Marie Hernandez</Author>
-      </TestamonialContainer>
-      <TestamonialContainer>
-        <Comment>
-          I made my first order from Tammy. It was done on time no hidden
-          costs,and most of all they were the best cake pops I could of ever
-          asked for. Already made a second order for a birthday cake for next
-          month. 👍👍👍
-        </Comment>
-        <Author>- Gary Meschede</Author>
-      </TestamonialContainer>
+      {reviews &&
+        reviews.map(review => (
+          <TestamonialContainer>
+            <Comment>{review.node.comments.internal.content}</Comment>
+            <Author>- {review.node.author}</Author>
+          </TestamonialContainer>
+        ))}
     </TestamonialsContainer>
   )
 }
 
 const TestamonialsContainer = styled.section`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   margin: 1rem;
+
+  @media screen and (min-width: 1000px) {
+    flex-direction: row;
+  }
 `
 const TestamonialContainer = styled.section`
   @media screen and (min-width: 1000px) {
     width: 60%;
     margin: 0 auto;
-    padding-top: 2rem;
+    padding: 2rem;
   }
 `
 const Comment = styled.p`

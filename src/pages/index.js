@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { Link, navigate } from "gatsby"
+import { Link, navigate, graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import Image from "../components/image"
@@ -9,7 +9,8 @@ import SEO from "../components/seo"
 import MostRecent from "../components/home/MostRecent"
 import Testamonials from "../components/home/Testamonials"
 
-const IndexPage = () => {
+const IndexPage = ({ data }) => {
+  const reviews = data.allContentfulReviewPost.edges
   const goToOrder = () => {
     navigate(`/order`)
   }
@@ -45,7 +46,7 @@ const IndexPage = () => {
         </Button>
       </TextContainer>
       <MostRecent style={{ paddingTop: "0.5rem" }} />
-      <Testamonials />
+      <Testamonials reviews={reviews} />
     </Layout>
   )
 }
@@ -54,8 +55,10 @@ const ImagesContainer = styled.section`
   width: 100vw;
   display: flex;
   flex-direction: column;
-  height: 800px;
-  object-fit: cover;
+  @media screen and (min-width: 1000px) {
+    height: 800px;
+    object-fit: cover;
+  }
 `
 const TextContainer = styled.section`
   padding: 1rem;
@@ -87,3 +90,21 @@ const Button = styled.button`
 `
 
 export default IndexPage
+
+export const pageQuery = graphql`
+  query {
+    allContentfulReviewPost {
+      edges {
+        node {
+          author
+          comments {
+            internal {
+              content
+            }
+          }
+          id
+        }
+      }
+    }
+  }
+`
