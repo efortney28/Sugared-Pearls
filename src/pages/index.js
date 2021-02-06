@@ -6,11 +6,12 @@ import Layout from "../components/layout"
 import Image from "../components/image"
 import Avatar from "../components/avatar"
 import SEO from "../components/seo"
-import MostRecent from "../components/home/MostRecent"
+import Favorites from "../components/home/Favorites"
 import Testamonials from "../components/home/Testamonials"
 
 const IndexPage = ({ data }) => {
   const reviews = data.allContentfulReviewPost.edges
+  const favorites = data.allContentfulFavoritesPost.edges
   const goToOrder = () => {
     navigate(`/order`)
   }
@@ -45,7 +46,7 @@ const IndexPage = ({ data }) => {
           ORDER NOW
         </Button>
       </TextContainer>
-      <MostRecent style={{ paddingTop: "0.5rem" }} />
+      <Favorites favorites={favorites} style={{ paddingTop: "0.5rem" }} />
       <Testamonials reviews={reviews} />
     </Layout>
   )
@@ -100,6 +101,18 @@ export const pageQuery = graphql`
           comments {
             internal {
               content
+            }
+          }
+          id
+        }
+      }
+    }
+    allContentfulFavoritesPost {
+      edges {
+        node {
+          image {
+            file {
+              url
             }
           }
           id
