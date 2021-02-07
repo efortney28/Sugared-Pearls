@@ -36,6 +36,8 @@ const IndexPage = ({ data }) => {
           Handler Certification, so you know that we mean quality.
         </P>
 
+        <P>All costs must be paid by cash or PayPal.</P>
+
         <P>
           Need something custom? We do that too! With{" "}
           <Span>Sugared Pearls Bake Shoppe</Span>, quality is a licensed

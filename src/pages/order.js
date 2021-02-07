@@ -24,6 +24,7 @@ export default function Order() {
           Ready to order? Fill out the form below and we will get back to you as
           soon as possible! Once we get your message, we will get back to you
           with a quote and then arrange payment.
+          <P>All costs must be paid by cash or PayPal.</P>
         </PageDescription>
         <FormContainer>
           <StyledForm
@@ -110,6 +111,10 @@ const StyledForm = styled.form`
   justify-content: center;
   align-items: center;
   width: 80vw;
+`
+const P = styled.p`
+  color: #6f6f6f;
+  font-stlye: regular;
 `
 const inputStyle = {
   padding: "1rem",
